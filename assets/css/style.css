@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+:root {
+  --primary: #e51f26;
+  --secondary: #1f0a0a;
+  --third: #f2dede;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--third);
+  color: var(--secondary);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.screenQuestion {
+  width: 550px;
+  height: 120px;
+  background: whitesmoke;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#question {
+  padding: 20px;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.other-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+  margin-top: 20px;
+}
+.answer-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.answer {
+  width: 120px;
+  padding: 8px;
+  border: 1px solid #1f0a0a;
+  border-radius: 5px;
+  margin-inline: 10px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.answer:hover {
+  background-color: white;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+  cursor: pointer;
+}
+
+#restart-btn {
+  width: 120px;
+  padding: 8px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background: #e51f26;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 280px) {
+  .screenQuestion {
+    width: 280px;
+    height: 80px;
+    font-size: 0.7rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .answer,
+  .other-container {
+    font-size: 0.8rem;
+  }
+  .other-container {
+    width: 100%;
+  }
+  #restart-btn {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 281px) and (max-width: 540px) {
+  .screenQuestion {
+    width: 400px;
+    font-size: 1rem;
+  }
+  .other-container {
+    width: 100%;
+  }
+}
