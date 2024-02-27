@@ -1,13 +1,12 @@
 import { questionsTable } from "./data.js";
-const CORRECT_AUDIO_PATH = "/assets/audio/correct.wav";
-const INCORRECT_AUDIO_PATH = "/assets/audio/incorrect.mp3";
+const CORRECT_AUDIO_PATH = "assets/audio/correct.wav";
+const INCORRECT_AUDIO_PATH = "assets/audio/incorrect.mp3";
 
 const questionElement = document.getElementById("question");
 const resetBtn = document.getElementById("restart-btn");
 const trueBtn = document.getElementById("true");
 const falseBtn = document.getElementById("false");
 const scoreElem = document.getElementById("score");
-
 const correct = new Audio(CORRECT_AUDIO_PATH);
 const incorrect = new Audio(INCORRECT_AUDIO_PATH);
 let questions = questionsTable;
